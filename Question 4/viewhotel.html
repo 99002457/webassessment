@@ -39,7 +39,42 @@
                         
                     })
           
-        });
+       
+        $('#tsearch').click(function(){
+                
+                var url="http://localhost:3004/showByType?Type="+$('#type').val();
+                $.get(url,function(data,status){
+                   data.forEach(hotel => {
+                        var str="";
+                    for(const prop in hotel)
+                    {
+                    str+=prop+' '+hotel[prop]+' '+'<br>';
+                    }
+                     $('#mydiv').append(str).append('<br>')
+                    });
+                })
+                
+            })
+  
+});
+$('#ccsearch').click(function(){
+                
+                var url="http://localhost:3004/showByType?Type="+$('#type').val();
+                $.get(url,function(data,status){
+                   data.forEach(hotel => {
+                        var str="";
+                    for(const prop in hotel)
+                    {
+                    str+=prop+' '+hotel[prop]+' '+'<br>';
+                    }
+                     $('#mydiv').append(str).append('<br>')
+                    });
+                })
+                
+            })
+  
+});
+   
     </script>
 </head>
 <body>
@@ -47,11 +82,11 @@
 
     <form action="" method="">
         Enter City: <input type="text" name="city" id="city" />
-        <input type="button" id='csearch' name='asearch' value="hotels by city"/><br><br>
+        <input type="button" id='csearch' name='csearch' value="hotels by city"/><br><br>
         Enter Type: <input type="text" name="" id="type" />
-        <input type="button" id='csearch' name='csearch' value="hotels by type"/><br><br>
+        <input type="button" id='tsearch' name='tsearch' value="hotels by type"/><br><br>
         Enter cusine: <input type="text" name="" id="type" />
-        <input type="button" id='dsearch' name='csearch' value="hotels by cusine"/><br><br>
+        <input type="button" id='ccsearch' name='ccsearch' value="hotels by cusine"/><br><br>
     </form>
     <div class='display' id='mydiv' name='mydiv'>
     </div>

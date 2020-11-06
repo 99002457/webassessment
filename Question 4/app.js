@@ -37,7 +37,7 @@
         res.status(200).send(newhotelList);
     })
     app.get("/showByCuisine",function(req,res){
-        var ht= req.query.Type;
+        var ht= req.query.cus;
         var newhotelList=[];
         hotelList.forEach(hotel => {
             if(hotel.type=ht && isArray(hotel))
