@@ -1,0 +1,28 @@
+
+
+[
+    {
+        "name":"savisagar", 
+        "City":"bangalore", 
+        "type":"veg", 
+        "cuisine":["inidan","chinese"]
+    },
+    {
+        "name":"grill", 
+        "City":"mysore", 
+        "type":"nonveg", 
+        "cuisine":["inidan","chinese","mexican"]
+    },
+    {
+        "name":"udupi uphar", 
+        "City":"bangalore", 
+        "type":"veg", 
+        "cuisine":["inidan"]
+    },
+    {
+        "name":"lakeview", 
+        "City":"bangalore", 
+        "type":"veg", 
+        "cuisine":["inidan","chinese","north america"]
+    }
+]
