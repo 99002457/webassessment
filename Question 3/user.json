@@ -1,0 +1,33 @@
+[
+    {
+        "username":"chethan", 
+        "city":"bangalore", 
+        "email":"chethan.gc@ltts.com", 
+        "phone":"9900245790"
+    },
+    {
+        "username":"bindu", 
+        "city":"shimoga", 
+        "email":"bindu.kr@ltts.com", 
+        "phone":"9900858568"
+    },
+    {
+        "username":"diyvesh", 
+        "city":"Mumbai", 
+        "email":"diyvesh.gc@ltts.com", 
+        "phone":"9989868532"
+    },
+    {
+        "username":"Anusha", 
+        "city":"andhra", 
+        "email":"anusha.gc@ltts.com", 
+        "phone":"9900236578"
+    },
+    {
+        "username":"afredi", 
+        "city":"bangalore", 
+        "email":"afredi.gc@ltts.com", 
+        "phone":"9900256845"
+    }
+    
+]

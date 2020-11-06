@@ -1,0 +1,64 @@
+3.      REST API using NODE – Call using AJAX
+·         Create a REST API using node for a domain model User 
+·         You can use JSON to store the set of values(username, city, email, phone)
+·         Modify question 1 to validate the user using this NODE API to check if the username is already there in the JSON file
+·         If the name exists, alert the user to choose a different username
+·         If the name does not exist, greet the user by printing his details below the form
+
+http://localhost:3004/showByCategory?category="+$('#category').val();
+ $(document).ready(function(){
+            $('#show').click(function(){
+                var url="http://localhost:3004/showAll"
+                $.get(url,function(data,status){
+                    data.forEach(book => {
+                        var str="";
+                        for(const prop in book)
+                        {
+                            str+=prop+' '+book[prop]+' '+'<br>';
+                        }
+                        $('#mydiv').append(str).append('<br>')
+                    });
+                })
+            })
+
+
+            var express= require('express');
+var app= express();
+var bookList= require('./books.json')
+
+var cors = function(req, res, next) { 
+    res.setHeader('Access-Control-Allow-Origin', '*'); 
+    next(); 
+} 
+app.use(cors);
+
+
+app.get("/showAll",function(req,res){
+    res.status(200).send(bookList)
+})
+
+app.get("/showByAuthor",function(req,res){
+    var auth= req.query.author;
+    var newBooklist=[];
+    bookList.forEach(book => {
+        if(book.Author==auth)
+        {
+            newBooklist.push(book)
+        }
+    });
+    res.status(200).send(newBooklist);
+})
+app.get("/showByCategory",function(req,res){
+    var cat= req.query.category;
+    var newBooklist=[];
+    bookList.forEach(book => {
+        if(book.category==cat)
+        {
+            newBooklist.push(book)
+        }
+    });
+    res.status(200).send(newBooklist);
+})
+app.listen(3004,function(){
+    console.log("Server started in the post 3002")
+})

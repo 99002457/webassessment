@@ -1,0 +1,7 @@
+4.      REST API using NODE
+·         Create a REST API using node for a domain model Hotel 
+·         You can use JSON to store the set of values(name, city, type(veg/nonveg),cuisine[Indian, Chinese ] )  cuisine is an array
+·         Create a HTML file (viewhotels.html) that has 
+·   one button to get list of hotels, one button to get HotelsByCity
+·   dropdown to get HotelsByType (Veg/ NonVeg) ,  dropdown to get HotelsByCuisine
+·         Print the result in the same page below these buttons (if possible ) in tablular format
